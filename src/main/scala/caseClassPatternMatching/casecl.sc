@@ -137,6 +137,9 @@ def simplifyAll(expr: Expr) : Expr = expr match {
   case _ => expr
 
 
+
+
+
 }
 
 //  case BinOp(op, l, r) =>
@@ -144,3 +147,21 @@ def simplifyAll(expr: Expr) : Expr = expr match {
 //  case _ => expr
 //}
 
+
+//sealed abstract class Expr
+//
+//warning: match is not exhaustive!
+//  missing combination
+//  UnOp
+//missing combination
+//  BinOp
+def describe(e: Expr): String = (e: @unchecked) match {
+  case Number(_) => "a number"
+  case Var(_) => "a variable"
+}
+
+val myTuple=("asdf", 1)
+val (str, number ) = myTuple
+
+val exp = new BinOp("*", Number(5), Number(1))
+val BinOp(op, left, right) = exp
