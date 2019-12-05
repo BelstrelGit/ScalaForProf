@@ -19,7 +19,7 @@ op.copy(operator = "-")
 def simplifyTop(expr: Expr) : Expr = expr match{
   case UnOp("-",  UnOp( "-" , e )) => e //двойное отрицание
   case BinOp("+", e, Number(0)) => e //прибавление нуля
-  case BinOp("*", e, Number(1.0)) => e //умнижение на единицу
+  case BinOp("*", e, Number(1.0)) => e //умножение на единицу
   case _ => expr
 }
 
