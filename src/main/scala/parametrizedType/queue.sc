@@ -10,7 +10,7 @@
 //leading весь список trailing копируется в leading в обратном порядке следования
 //элементов. Это делается с помощью операции по имени mirror .
 
-class Queue[T](
+class Queue[T] private (
               private val leading: List[T],
               private val trailing: List[T]
               ){
@@ -29,6 +29,11 @@ class Queue[T](
     new Queue(leading, x :: trailing)
 }
 
+object Queue {
+  def apply[T](xs: T*) = new Queue[T](xs.toList, Nil)
+}
+//Queue(1, 2, 3)
+// Queue.apply(1, 2, 3)
 // Операция mirror может занять время, пропорциональное количеству элементов очереди, но только
 //  если список leading пуст. Если список leading не пуст, возвращение из метода про-
 //  исходит немедленно. Поскольку head и tail вызывают mirror , их вычислительная
