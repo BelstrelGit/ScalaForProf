@@ -21,3 +21,6 @@ moreBits(3)
 moreBits(0)
 
 //Списочные отображения
+val map = collection.immutable.ListMap(
+  1 -> "one", 2 -> "two")
+map(2)
