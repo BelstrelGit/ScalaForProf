@@ -1,11 +1,11 @@
 
-
-abstract class Fruit
-class Apple extends Fruit
-class Orange extends Fruit
-
-val apples = new Apple :: Nil
-val fruits = new Orange :: apples
+//
+//abstract class Fruit
+//class Apple extends Fruit
+//class Orange extends Fruit
+//
+//val apples = new Apple :: Nil
+//val fruits = new Orange :: apples
 
 //def ::[U >: T](x: U): List[U] = new scala.::(x, this)
 
